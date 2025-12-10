@@ -1,0 +1,8 @@
+{
+  "me@example.com": {
+    "email": "me@example.com",
+    "salt": "...",
+    "hash": "...",
+    "createdAt": "2025-12-11T..."
+  }
+}

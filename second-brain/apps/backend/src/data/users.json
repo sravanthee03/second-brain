@@ -1,0 +1,14 @@
+[
+  {
+    "id": "d00c8bfb-02dc-41e4-88a8-c08990f658e7",
+    "email": "me@example.com",
+    "passwordHash": "$2b$08$2kajLop7ZYAknD92YBIdkuR3W2mYAXyEO0pxkNMKpll6uEO9BT2Ay",
+    "createdAt": "2025-12-10T12:30:34.590Z"
+  },
+  {
+    "id": "76dff6bb-21b6-4bff-884c-bc323b197a21",
+    "email": "sravantheereddy05@gmail.com",
+    "passwordHash": "$2b$08$TYiIPMG5Cqqhp6I6CB3ZoeYN.w5all6C8Pr1wLOJvnRBz7GAVyh6G",
+    "createdAt": "2025-12-10T13:23:43.103Z"
+  }
+]

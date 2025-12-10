@@ -1,0 +1,73 @@
+﻿/* globals.css — premium theme for Second Brain (avatars, glow, typing) */
+
+:root{
+  --panel: #0f1720;
+  --muted: #94a3b8;
+  --glass: rgba(255,255,255,0.04);
+}
+
+/* base */
+html,body,#__next { height:100%; }
+body {
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(37,99,235,0.06), transparent 6%),
+              radial-gradient(900px 400px at 90% 90%, rgba(139,92,246,0.04), transparent 8%),
+              #020617;
+  color: #e6eef8;
+}
+
+/* small helpers */
+.card { background: var(--panel); border-radius: 0.9rem; padding:1rem; box-shadow: 0 8px 30px rgba(2,6,23,0.7); }
+.token-badge { background: rgba(255,255,255,0.03); padding: 0.35rem 0.6rem; border-radius: 0.5rem; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.06); }
+
+/* message styles */
+.rounded-2xl { border-radius: 1rem; }
+.shadow { box-shadow: 0 8px 30px rgba(2,6,23,0.6); }
+
+/* typing indicator dots */
+.typing-dots {
+  width: 48px;
+  height: 18px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.typing-dots::before,
+.typing-dots::after,
+.typing-dots span {
+  content: "";
+  width: 8px;
+  height: 8px;
+  display:inline-block;
+  background: linear-gradient(180deg, #fff, #cbd5e1);
+  border-radius: 999px;
+  opacity: 0.95;
+  transform: translateY(0);
+  animation: typingBounce 1s infinite ease-in-out;
+}
+.typing-dots::before { animation-delay: 0s; }
+.typing-dots span { animation-delay: 0.15s; }
+.typing-dots::after { animation-delay: 0.3s; }
+
+/* small fadeIn */
+@keyframes fadeIn {
+  from { opacity:0; transform: translateY(6px); }
+  to { opacity:1; transform: translateY(0); }
+}
+.animate-fadeIn { animation: fadeIn .25s ease-out; }
+
+/* typing bounce */
+@keyframes typingBounce {
+  0% { transform: translateY(0); opacity:0.35; }
+  30% { transform: translateY(-5px); opacity:1; }
+  60% { transform: translateY(0); opacity:0.6; }
+  100% { transform: translateY(0); opacity:0.35; }
+}
+
+/* responsiveness tweaks */
+@media (max-width: 900px) {
+  aside { display: none; } /* hide sidebar on small screens for focus */
+}
