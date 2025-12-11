@@ -1,17 +1,15 @@
+// apps/backend/tsconfig.json
 {
   "compilerOptions": {
     "target": "ES2020",
     "module": "CommonJS",
-    "lib": ["ES2020"],
     "outDir": "dist",
     "rootDir": "src",
-    "strict": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
     "skipLibCheck": true,
-    "types": ["node"]
+    "forceConsistentCasingInFileNames": true,
+    "strict": false,
+    "resolveJsonModule": true
   },
-  "include": ["src/**/*"]
+  "include": ["src"]
 }
